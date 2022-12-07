@@ -1,0 +1,68 @@
+<canvas id="canvas"></canvas>
+
+#canvas{
+    border: 10px soild white;
+}
+
+body {
+  background-color: #241d33;
+}
+  { background-color: #302244;
+}
+
+var canvas = document.getElementById('canvas');
+canvas.width = 600;
+canvas.height = 600;
+var context = canvas.getContext('2d');
+
+var object1 = {x:200, y:200, width: 200, height: 200 };
+var object2 = {x:20, y:50, width: 50, height: 50 };
+
+// Place holders for mouse x,y position
+var mouseX = 0;
+var mouseY = 0;
+
+// Test for collision between an object and a point
+function contains(targetA, targetB) {
+  return !(targetB.x > (targetA.x + targetA.width) || 
+           (targetB.x + targetB.width) < targetA.x || 
+           targetB.y > (targetA.x + targetA.height) ||
+           (targetB.y + targetB.height) < targetA.y);
+}
+
+// Loop
+setInterval(onTimerTick, 30);
+
+// Render Loop
+function onTimerTick() {
+    
+    // update object2 to mouse
+    object2.x = mouseX - (object2.width * .5);
+    object2.y = mouseY - (object2.height * .5);
+    
+    // Clear the canvas
+    canvas.width = canvas.width;
+    
+    // detect a collision
+    var collision = contains(object1, object2);
+    
+    // draw text
+    context.fillStyle = "purple";
+    context.font="14px lora";
+    context.fillText("Collision "+collision +" Mouse ("+mouseX+","+mouseY+")", 10, 10);
+    
+    // draw first rectangle
+    context.fillStyle = "pink";
+    context.fillRect (object1.x,object1.y,object1.width,object1.height);
+    
+    // draw second rectangl
+    context.fillStyle = collision ? "blue" : "purple";
+    context.fillRect (object2.x,object2.y,object2.width,object2.height);
+}
+
+// Update mouse position
+canvas.onmousemove = function(e) {
+    mouseX = e.offsetX;
+    mouseY = e.offsetY;
+}
+
