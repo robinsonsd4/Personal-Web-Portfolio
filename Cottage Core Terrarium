@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Cottage Core Terrarium </title>
+  <!-- Task #1 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+ 
+  <h1>Cottage Core Terrarium </h1>
+  <div id="page">
+    <div id="left-container" class="container">
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant1" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant2" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant3" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant4" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant5" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant6" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant7" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+    </div>
+    <div id="right-container" class="container">
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant8" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant9" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant10" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant11" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant12" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant13" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+      <div class="plant-holder">
+        <img class="plant" alt="plant" id="plant14" src="https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/3-terrarium/solution/images/plant6.png?raw=true" />
+      </div>
+    </div>
+
+    <div id="terrarium">
+      <div class="jar-top"></div>
+      <div class="jar-walls">
+        <div class="jar-glossy-long"></div>
+        <div class="jar-glossy-short"></div>
+      </div>
+      <div class="dirt"></div>
+      <div class="jar-bottom"></div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+
+body {
+  font-family: Garamond;
+}
+
+h1 {
+  /*   color: blue; */
+  color: #9DC183;
+  text-align: center;
+}
+
+#left-container {
+  background-color: #E6D1AB ;
+  width: 15%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  padding: 10px;
+}
+
+#right-container {
+  background-color: #E6D1AB;
+  width: 15%;
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  padding: 10px;
+}
+
+.plant-holder {
+  position: relative;
+  height: 13%;
+  left: -1px;
+}
+
+.plant {
+  position: absolute;
+  max-width: 150%;
+  max-height: 150%;
+  z-index: 2;
+}
+
+.jar-walls {
+  height: 80%;
+  width: 60%;
+  background: #947b4f;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0.5%;
+  left: 20%;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.jar-top {
+  width: 50%;
+  height: 5%;
+  background: #947b4f;
+  position: absolute;
+  bottom: 75.7%;
+  left: 25%;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.jar-bottom {
+  width: 60%;
+  height: 1%;
+  background: #947b4f;
+  position: absolute;
+  bottom: 0%;
+  left: 20%;
+  opacity: 0.7;
+}
+
+.dirt {
+  width: 60%;
+  height: 5%;
+  background: #3a241d;
+  position: absolute;
+  border-radius: 0 0 1rem 1rem;
+  bottom: 1%;
+  left: 20%;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
