@@ -1,0 +1,83 @@
+<div id="star-five"></div>
+
+<div class="center-on-page">
+    
+</div>
+
+<head>
+    <title>
+   
+    </title>
+  
+    <style>
+        body {
+            background-image: url(
+"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3a5d69119795171.60b7ca9558375.jpg");
+            background-repeat: no-repeat;
+      }
+
+
+  #star-five {
+      margin: 50px 0;
+      position: relative;
+      display: block;
+      color: purple;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid black;
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+    }
+    #star-five:before {
+      border-bottom: 80px solid black;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+    #star-five:after {
+      position: absolute;
+      display: block;
+      color: black;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid black;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
+
+
+
+class star-five {
+  private speed: number;
+  private isAccelerating: boolean;
+  private acceleration: Vector;
+  private deceleration: number;
+
+  constructor(width: number, height: number) {
+    ...
+    this.speed = 0.2;
+    this.isAccelerating = false;
+    this.acceleration = new Vector(0, 0);
+    this.deceleration = 0.05;
+  }
+
+  get isShipThrottling(): boolean {
+    return this.isAccelerating;
+  }
+
+  set isShipThrottling(isAccelerating: boolean) {
+    this.isAccelerating = isAccelerating;
+  }
+}
