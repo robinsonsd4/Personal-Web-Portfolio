@@ -1,0 +1,52 @@
+<input id="username" name="username" type="text">
+
+hr />
+<h2>Register</h2>
+<form id="registerForm">
+  <label for="user">Username</label>
+  <input id="user" name="user" type="text">
+  <label for="currency">Currency</label>
+  <input id="currency" name="currency" type="text" value="$">
+  <label for="description">Description</label>
+  <input id="description" name="description" type="text">
+  <label for="balance">Current balance</label>
+  <input id="balance" name="balance" type="number" value="0">
+  <button>Register</button>
+</form>
+
+<p><img src="https://o.remove.bg/downloads/bfc6a54a-5d32-49d1-a3de-287aeef3b201/st_small_507x507-pad_600x600_f8f8f8-removebg-preview.png" style="float:right;width:100px;height:100px;">
+  
+<p><img src="https://o.remove.bg/downloads/bfc6a54a-5d32-49d1-a3de-287aeef3b201/st_small_507x507-pad_600x600_f8f8f8-removebg-preview.png" style="float:left;width:100px;height:100px;">
+  
+ <style>
+p {
+  background-image: url("https://o.remove.bg/downloads/ef21a94b-1bd7-43a5-9665-0eb38beec321/Vintage_flower_power_90s_flowers_fabric__-Mint-removebg-preview.png");
+}
+</style> 
+
+body {
+  background-color: lightgreen;
+}
+
+body {
+  color: white;
+}
+
+h1 {
+  color: green;
+}
+
+<template id="login">
+  <h1>Bank App</h1>
+  <section>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input id="username" name="user" type="text">
+      <button>Login</button>
+    </form>
+  </section>
+</template>
+
+
+<form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
